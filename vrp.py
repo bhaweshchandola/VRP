@@ -7,9 +7,11 @@ vehicle_capacity =60
 def distance(point1, point2):
 
     return((point2[1] - point1[1])**2 + (point2[0] - point1[0])**2)**0.5
-
-initial=[0,0,0]
-#points=([0,0,0],[6,0,10],[2,3,30],[3,7,40],[0.5,9,10],[8,9,20],[10,3,25])
+'''
+The customer location is given in the format [x axis location,y axis location,demand]
+'''
+initial=[0,0,0] #depot location
+#points=([0,0,0],[6,0,10],[2,3,30],[3,7,40],[0.5,9,10],[8,9,20],[10,3,25]) #dataset
 #points=([0,0,0],[-92,88,16],[67,79,21],[-71,-37,15],[104,-36,24],[-177,27,4])  #dataset 1
 #points = ([0,0,0],[-151,-8,7],[-146,93,29],[-37,129,5],[115,127,37],[323,246,31],[245,33,29],[129,-135,21],[-12,-144,35],[-129,-127,31],[-240,-64,11])  #dataset 2
 points=([0,0,0],[-168,153,17],[-15,181,11],[161,140,10],[161,-40,18],[-115,-189,22],[-230,-42,7])
@@ -21,14 +23,6 @@ for f in perm:
     if f[0] == initial:
 
         new_perm.append(f)
-
-
-#print(new_perm)
-
-# def totaldistance(point):
-#
-#     return sum([(distance(point[index],point[index+1])) for index,point in enumerate(point)])
-
 
 
 totaldistance=[]
